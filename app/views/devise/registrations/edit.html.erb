@@ -10,11 +10,7 @@
 
   <div class="field">
     <%= f.label :avatar %><br />
-      <% if resource.avatar.attached? %>
-        <%= image_tag resource.avatar.variant(resize: "100x100!") %>
-      <%else%>
-        <%= image_tag gravatar_image_url(current_user.email) %>
-      <%end%>
+      <%= render partial: "shared/avatar" %>
     <%= f.file_field :avatar %>
   </div>
 
