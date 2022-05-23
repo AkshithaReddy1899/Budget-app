@@ -78,3 +78,5 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
 gem 'gravatar_image_tag', '~> 1.2'
+
+gem 'cancancan', '~> 3.3'

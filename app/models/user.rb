@@ -5,4 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   has_one_attached :avatar
+
+  def assign_default_role
+    self.role(:author) if self.role.blank?
+  end
 end
