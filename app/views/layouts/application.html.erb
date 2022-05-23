@@ -10,9 +10,12 @@
   </head>
 
   <body>
+    <%= render partial: "shared/nav" %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="">
+      <%= yield %>
+    </div>
   </body>
 </html>
 <%console%>
