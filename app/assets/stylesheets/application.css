@@ -11,15 +11,13 @@
  * It is generally better to create a new file per style scope.
  *
  */
-
- // Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto+Flex:opsz@8..144&display=swap');
+ 
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Playfair+Display&family=Roboto+Flex:opsz@8..144&display=swap');
 
 :root {
 	--playfair-font-family: 'Playfair Display', serif;
 	--roboto-font-family: 'Roboto Flex', sans-serif;
+	--macondo-font-family: 'Macondo', cursive;
 }
 
 body {
@@ -29,7 +27,7 @@ body {
 .links {
 	color: darkslategrey;
 	text-decoration: none;
-	margin-top: 6px;
+	margin-top: 20px;
 }
 
 .header {
@@ -41,6 +39,43 @@ body {
 
 li {
 	list-style: none;
+}
+
+/* Splash */
+
+.splash {
+  display: flex;
+	justify-content: center;
+  align-items: center;
+	flex-direction: column;
+}
+
+.splash-container {
+	border: 1x solid red;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.blob-container {
+	position: absolute;
+  z-index: -1;
+  transform-origin: 90% 50%;
+}
+
+.blob {
+	animation-name: blob-float;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.splash-text {
+	font-family: var(--macondo-font-family);
+	font-size: 2.5rem;
+	font-weight: bolder;
 }
 
 /* NAV */
@@ -66,5 +101,12 @@ li {
 @media screen and (min-width: 800px) {
 	.form-container {
 		width: 500px;
+		height: auto;
 	}
+}
+
+@keyframes blob-float {
+	0% { transform: translate(0,  0px); }
+	50% { transform: translate(0, 15px); }
+	100% { transform: translate(0, -0px); }    
 }

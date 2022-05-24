@@ -1,3 +1,4 @@
+<%# link to users#index %>
 <% if current_user.avatar.exists? %>
   <%= image_tag current_user.avatar, class: "user-icon" %>
 <%else%>
