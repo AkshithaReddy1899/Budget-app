@@ -78,3 +78,5 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
 gem 'cancancan', '~> 3.3'
+
+gem 'bootstrap-icons', '~> 1.0', '>= 1.0.12'
