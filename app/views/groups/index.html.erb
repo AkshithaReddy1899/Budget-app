@@ -4,7 +4,13 @@
 			<% if @groups.blank? %>
 				<p>No categories created yet.</p>
 			<%else%>
-			  <p>Not empty!</p>
+			 	<div class="container">
+				  <div class="row">
+					  <% @groups.each do |group|%>
+					    <%= render partial:"groups/group", locals: {group: group} %>
+						<%end%>
+					</div>
+				</div>
 			<%end%>
 		</div>
 	</div>

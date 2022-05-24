@@ -1,0 +1,16 @@
+<div class="col col-sm-12 col-lg-6 mx-auto m-1">
+  <div class="border group-container d-flex justify-content-between align-items-center p-2">
+	  <span>
+		icon
+		<%= render partial: "groups/group_icon", locals: {icon: group.icon} %>
+		</span>
+		<p class="text-start">
+		  <%= group.name %>
+			<br>
+			<%= group.created_at.strftime("%d %b %y") %>
+		</p>
+		<p>
+		Amount
+		</p>
+	</div>
+</div>
