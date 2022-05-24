@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+  get 'splash/index'
   devise_for :users
-  
   authenticated :user do
-    root to: 'users#index', as: :authenticated_root
+    root to: 'groups#index', as: :authenticated_root
   end
-  root "users#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+  root "splash#index"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :groups, only: [:index, :show, :new, :create] do
+    resources :entities, only: [:index, :new, :create, :show]
+  end
 end
