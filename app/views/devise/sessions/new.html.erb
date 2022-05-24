@@ -8,7 +8,7 @@
           <%= f.label :email, class: "form-label" %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "example@gmail.com", class: "form-control" %>
         </div>
-        <br/>
+        
         <div class="field">
           <%= f.label :password, class: "form-label" %><br />
           <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder:"six digit password"  %>
@@ -20,7 +20,7 @@
             <%= f.label :remember_me %>
           </div>
         <% end %>
-        <br/>
+        
         <div class="actions">
           <%= f.submit "Log in", class:"btn btn-dark" %>
         </div>

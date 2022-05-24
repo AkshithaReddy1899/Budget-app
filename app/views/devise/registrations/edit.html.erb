@@ -14,17 +14,17 @@
           <%= f.label :name, class:"form-label" %><br />
           <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: "John Doe" %>
         </div>
-        <br>
+        
         <div class="field">
           <%= f.label :avatar, class:"form-label" %><br />
             <%= f.file_field :avatar, class:"form-control" %>
         </div>
-        <br>
+        
         <div class="field">
           <%= f.label :email, class:"form-label" %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "johndoe@gmail.com" %>
         </div>
-        <br>
+        
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
@@ -36,17 +36,17 @@
             <em><%= @minimum_password_length %> characters minimum</em>
           <% end %>
         </div>
-        <br>
+        
         <div class="field">
           <%= f.label :password_confirmation, class:"form-label" %><br />
           <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder:"confirm password" %>
         </div>
-        <br>
+        
         <div class="field">
           <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
           <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control", placeholder: 'current password' %>
         </div>
-        <br>
+        
         <div class="actions">
           <%= f.submit "Update" %>
         </div>

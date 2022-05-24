@@ -10,12 +10,12 @@
           <%= f.label :name, class:"form-label" %><br />
           <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: "John doe" %>
         </div>
-        <br/>
+
         <div class="field">
           <%= f.label :email, class:"form-label" %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "johndoe@gmail.com" %>
         </div>
-        <br/>
+        
         <div class="field">
           <%= f.label :password, class:"form-label" %>
           <% if @minimum_password_length %>
@@ -23,12 +23,12 @@
           <% end %><br />
           <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "six-digit password" %>
         </div>
-        <br/>
+        
         <div class="field">
           <%= f.label :password_confirmation, class:"form-label" %><br />
           <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "enter your password again" %>
         </div>
-        <br/>
+        
         <div class="actions">
           <%= f.submit "Sign up", class: "btn btn-dark" %>
         </div>
