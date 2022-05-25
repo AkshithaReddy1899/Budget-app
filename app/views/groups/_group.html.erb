@@ -1,23 +1,23 @@
-<%= link_to group_entities_path(group.id), class:"group-link m-2", locals: {group: group} do %>
+<%= link_to group_entities_path(group.id), class:"group-link m-3 mx-auto", locals: {group: group} do %>
 	<div class="col col-sm-12 col-lg-6 mx-auto">
-		<div class="border group-container d-flex justify-content-between align-items-center p-3">
+		<div class="group-container d-flex justify-content-between align-items-center shadow bg-light p-3">
 			<span>
 			<%= render partial: "groups/group_icon", locals: {icon: group.icon} %>
 			</span>
-			<p class="text-start">
+			<p class="d-flex justify-content-between align-items-start flex-column">
 				<b class="group-name"><%= group.name %></b>
-				<br>
-				<%= group.created_at.strftime("%d %b %y") %>
+				<small class="fs-6">
+				  <%= group.created_at.strftime("%d %b %y") %>
+				</small>
 			</p>
 			<p>
-			Amount
 			<% @total_amount = 0 %>
 			  <% @entities.each do |entity| %>
 				  <% if entity.group_id == group.id %>
 				    <% @total_amount += entity.amount %>
 					<%end%>
 				<%end%>
-					<%= @total_amount %>
+					<b>$&nbsp;<%= @total_amount %></b>
 			</p>
 		</div>
 	</div>

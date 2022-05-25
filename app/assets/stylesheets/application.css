@@ -1,27 +1,14 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- */
- 
-@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Playfair+Display&family=Roboto+Flex:opsz@8..144&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Playfair+Display&family=Roboto+Serif:opsz@8..144&display=swap');
 
 :root {
 	--playfair-font-family: 'Playfair Display', serif;
-	--roboto-font-family: 'Roboto Flex', sans-serif;
+	--roboto-font-family: 'Roboto Serif', serif;
 	--macondo-font-family: 'Macondo', cursive;
 }
 
 body {
 	font-family: var(--roboto-font-family);
+	background: whitesmoke;
 }
 
 .links {
@@ -35,6 +22,8 @@ body {
 	font-size: 2rem;
 	font-weight: 900;
 	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 20px;
 }
 
 li {
@@ -72,6 +61,11 @@ li {
 	animation-timing-function: ease-in-out;
 }
 
+.logo {
+	font-family: var(--macondo-font-family);
+	font-size: 1.2rem;
+}
+
 .splash-text {
 	font-family: var(--macondo-font-family);
 	font-size: 2.5rem;
@@ -87,12 +81,19 @@ li {
 .navbar .user-icon {
 	width: 40px;
 	height: 40px;
-	border: 1px solid black;
 	border-radius: 100%;
 }
 
 .nav-btn-container {
 	width: 160px;
+}
+
+.nav-link {
+	color: white;
+}
+
+.nav-item {
+	margin-left: 20px;
 }
 
 /*  */
@@ -102,19 +103,8 @@ li {
 	height: 60px;
 }
 
-.bi-container {
-	border: 2px solid black;
-	width: 80px;
-	height: 80px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 100%;
-}
-
 .bi {
 	font-size: 3.1rem;
-	padding: 10px;
 }
 
 .group-name {
@@ -128,6 +118,20 @@ li {
 
 .text {
 	text-align: center;
+}
+
+.back {
+	display: flex;
+	justify-content: start;
+	text-decoration: none;
+	color: black;
+	border: none;
+	background: transparent;
+	margin-left: 20px;
+}
+
+.back .bi {
+	font-size: 2rem;
 }
 
 @media screen and (min-width: 800px) {
