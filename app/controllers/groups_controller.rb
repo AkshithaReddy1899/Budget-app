@@ -2,11 +2,7 @@ class GroupsController < ApplicationController
   load_and_authorize_resource
   def index
     @groups = Group.all
-  end
-
-  def show
-    @user = current_user
-    @group = Group.find(params[:id])
+    @total_amount = 0
   end
 
   def new
