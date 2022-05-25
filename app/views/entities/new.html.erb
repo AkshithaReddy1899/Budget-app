@@ -1,0 +1,23 @@
+<div class="container form-container">
+  <div class="form p-4 m-1">
+    <div class="shadow-lg rounded p-5">
+      <h2 class="header">Add a new Transaction</h2>
+			<%= form_with :model => @entity, url: group_entities_path, method: :post do |f| %>
+			  <br>
+					<div class="field">
+						<%= f.label :name, class:"form-label" %><br />
+						<%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: "name of the transaction" %>
+					</div>
+
+					<div class="field">
+						<%= f.label :amount, class:"form-label" %><br />
+						<%= f.text_field :amount, autofocus: true, class: "form-control", placeholder: "amount" %>
+					</div>
+					
+					<div class="actions">
+          <%= f.submit "Add transaction", class: "btn btn-dark" %>
+        </div>
+			<%end%>
+		</div>
+	</div>
+</div>

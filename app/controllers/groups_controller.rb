@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  load_and_authorize_resource
   def index
     @groups = Group.all
   end
@@ -16,9 +17,8 @@ class GroupsController < ApplicationController
     @user = current_user
     new_group = Group.new(group_params)
     new_group.user_id = current_user.id
-    new_group.save
     if new_group.save
-      redirect_to group_entities_path(new_group.id)
+      redirect_to groups_path
       flash[:success] = "New category added!"
     else
       redirect_to new_group_path

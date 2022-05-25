@@ -1,0 +1,18 @@
+<div class="container text-center">
+  <div class="row">
+	  <div class="col-sd-12 col-lg-6border">
+		  <% if @entities.blank? %>
+				<p class="text-center"> No transactions added yet. Add one!</p>
+			<%else%>
+			  <%= @total_amount %>
+				<% @entities.each do |entity|%>
+					<%= render partial:"list", locals: {entity: entity} %>
+				<%end%>
+			<%end%>
+			<hr>
+				<div class="bottom-btn">
+				<%= link_to "Add a new transaction", new_group_entity_path, class: "btn btn-secondary" %>
+				</div>				
+		</div>
+	</div>
+</div>

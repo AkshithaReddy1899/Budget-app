@@ -4,11 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
-  after_create :assign_default_role
-
   has_one_attached :avatar
-
-  def assign_default_role
-    self.role == 'author' if self.role.blank?
-  end
+  has_many :entities
+  has_many :groups
 end
