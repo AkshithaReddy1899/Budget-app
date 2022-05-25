@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   load_and_authorize_resource
   def index
     @groups = Group.all
-    @total_amount = 0
+    @entities = Entity.all
   end
 
   def new

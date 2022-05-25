@@ -2,7 +2,7 @@ class EntitiesController < ApplicationController
 	load_and_authorize_resource
 	def index
 		@group = Group.find(params[:group_id])
-		@entities = Entity.where(group_id: @group.id)
+		@entities = Entity.where(group_id: @group.id).order("created_at DESC")
 		@total_amount = 0
 		@entities.each do |entity|
 			@total_amount +=entity.amount

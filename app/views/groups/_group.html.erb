@@ -10,9 +10,14 @@
 				<%= group.created_at.strftime("%d %b %y") %>
 			</p>
 			<p>
-			<%= @total_amount %>
 			Amount
-			  <%= render partail: "groups/total", locals: group: group %>
+			<% @total_amount = 0 %>
+			  <% @entities.each do |entity| %>
+				  <% if entity.group_id == group.id %>
+				    <% @total_amount += entity.amount %>
+					<%end%>
+				<%end%>
+					<%= @total_amount %>
 			</p>
 		</div>
 	</div>
