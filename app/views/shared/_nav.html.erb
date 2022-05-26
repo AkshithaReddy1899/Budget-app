@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-primary text-light">
   <div class="container-fluid">
-  <p class="logo nav-link m-auto">Budgety<p>
+  <p class="logo nav-link">Budgety<p>
     <% if user_signed_in? %>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,9 +22,9 @@
       </div>
     <% else %>
       <div class="navbar-right">
-        <%= link_to "Login", new_user_session_path, class:"btn btn-secondary nav-btn" %>
+        <%= link_to "Login", new_user_session_path, class:"btn btn-dark nav-btn" %>
 				&nbsp;
-					<%= link_to "Sign up", new_user_registration_path, class: "btn btn-secondary nav-btn" %>
+					<%= link_to "Sign up", new_user_registration_path, class: "btn btn-dark nav-btn" %>
       </div>
     <% end %>
   </div>
