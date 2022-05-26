@@ -4,9 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
+  before_create :skip_confirmation_notification!
+
   has_one_attached :avatar
-  has_many :entities
-  has_many :groups
+  has_many :entities, dependent: :destroy
+  has_many :groups, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 100, minimum: 3 }
   validates :email, presence: true
