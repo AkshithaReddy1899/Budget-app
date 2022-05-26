@@ -15,10 +15,10 @@ class GroupsController < ApplicationController
     new_group.user_id = current_user.id
     if new_group.save
       redirect_to groups_path
-      flash[:success] = "New category added!"
+      flash[:success] = 'New category added!'
     else
       redirect_to new_group_path
-      flash[:alert] = "Category not added. Try again!"
+      flash[:alert] = 'Category not added. Try again!'
     end
   end
 
