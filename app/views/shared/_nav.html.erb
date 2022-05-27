@@ -15,8 +15,6 @@
           </li>
         </ul>
         <div class="d-flex flex-column justify-content-around flex-lg-row">
-          <%= render partial: "shared/avatar"%>
-          &nbsp;
 					<%= button_to "Sign out", destroy_user_session_path, class: "btn btn-dark", method: :delete, data: { turbo: false } %>
         </div>
       </div>
