@@ -1,8 +1,8 @@
 class GroupsController < ApplicationController
   load_and_authorize_resource
   def index
-    @groups = Group.all
-    @entities = Entity.all
+    @groups = Group.where(user_id: current_user.id)
+    @entities = Entity.where(user_id: current_user.id)
   end
 
   def new
