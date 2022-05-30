@@ -1,0 +1,22 @@
+<div class="container text-center mt-5">
+  <div class="row">
+	  <div class="col-sd-12 col-lg-7 mx-auto">
+		<h2 class="header">Categories</h2>
+			<% if @groups.blank? %>
+				<p class="text">No categories created yet.</p>
+			<%else%>
+			 	<div class="container">
+				  <div class="row">
+					  <% @groups.each do |group|%>
+					    <%= render partial:"groups/group", locals: {group: group} %>
+						<%end%>
+					</div>
+				</div>
+			<%end%>
+		</div>
+	</div>
+	<hr>
+  <div class="bottom-btn">
+  <%= link_to "Add a new category", new_group_path, class: "btn btn-secondary" %>
+	</div>
+</div>

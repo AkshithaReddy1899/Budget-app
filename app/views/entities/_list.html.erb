@@ -1,0 +1,12 @@
+<div class="col col-sm-12 col-lg-6 mx-auto m-4">
+	<div class="border group-container d-flex justify-content-between align-items-center p-3 shadow bg-light">
+		<p class="text-start">
+			<b class="group-name"><%= entity.name %></b>
+			<br>
+			<%= entity.created_at.strftime("%d %b %y") %>
+		</p>
+		<p>
+		  <b><%= entity.amount %>$</b>
+		</p>
+	</div>
+</div>

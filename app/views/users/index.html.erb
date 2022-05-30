@@ -1,0 +1,16 @@
+<div class="container form-container">
+  <div class="form p-4 m-1">
+    <div class="shadow-lg rounded p-5">
+      <h2 class="header">My Profile</h2>
+
+			<div class="d-flex justify-content-center align-items-center flex-column p-3 border">
+			
+			<h2 class="m-3"><%=@user.name%></h2>
+
+			<p><%= @user.email %></p>
+
+			<%= link_to "Edit profile", edit_user_registration_path, class:"btn btn-secondary mt-2" %>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<span class="pt-3">
+	<%= button_to groups_path, class: "back", method: :get do %>
+		<i class="bi bi-backspace"></i>
+	<%end%>
+</span>
+<div class="container form-container">
+  <div class="form p-4 m-1">
+    <div class="shadow-lg rounded p-5">
+      <h2 class="header">Add a new category</h2>
+				<%= form_with :model => @group, url: groups_path, method: :post do |f| %>
+				<br>
+					<div class="field">
+						<%= f.label :name, class:"form-label" %><br />
+						<%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: "Name of the category" %>
+					</div>
+					<div class="field">
+					  <p class="form-label">Pick a category</p>
+						<%= f.select :icon, ["Housing", "Transportation", "Food", "Utilities", "Insurance", "Medical & Healthcare", "Saving, Investments, & Debt Payments", "Personal Spending", "Recreation & Entertainment", "Clothes", "Miscellaneous"], class: "dropdown-menu" %>
+					</div>
+
+					<div class="actions">
+          <%= f.submit "Add category", class: "btn btn-dark" %>
+        </div>
+					
+				<%end%>
+		</div>
+	</div>
+</div>
