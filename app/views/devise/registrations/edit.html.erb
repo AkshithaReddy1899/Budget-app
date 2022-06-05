@@ -6,9 +6,19 @@
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
         <br>
+
+        <div class="avatar text-center">
+          <%= render partial: "shared/avatar" %>
+        </div>
+
         <div class="field">
           <%= f.label :name, class:"form-label" %><br />
           <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control", placeholder: "John Doe" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :avatar, class:"form-label" %><br />
+            <%= f.file_field :avatar, class:"form-control" %>
         </div>
         
         <div class="field">
@@ -19,11 +29,11 @@
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
+
         <div class="field">
-          <%= f.label :password, class:"form-label" %><br><b>(leave blank if you don't want to change it)</b><br />
+          <%= f.label :password, class:"form-label" %><br></b>
           <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "new six digit password" %>
           <% if @minimum_password_length %>
-            <br />
             <em><%= @minimum_password_length %> characters minimum</em>
           <% end %>
         </div>

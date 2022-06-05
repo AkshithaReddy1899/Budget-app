@@ -4,12 +4,19 @@
       <h2 class="header">My Profile</h2>
 
 			<div class="d-flex justify-content-center align-items-center flex-column p-3 border">
+
+			<span><%= render partial: "shared/avatar"%></span>
 			
 			<h2 class="m-3"><%=@user.name%></h2>
 
 			<p><%= @user.email %></p>
 
 			<%= link_to "Edit profile", edit_user_registration_path, class:"btn btn-secondary mt-2" %>
+			<hr/>
+			<h5 class="header m-4 fs-4">Cancel my account</h5>
+
+      <%= button_to "Cancel my account", user_registration_path, data: { confirm: "Are you sure?" }, method: :delete, class:"btn btn-danger text-center" %>
+      <br>
 			</div>
 		</div>
 	</div>
