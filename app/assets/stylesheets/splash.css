@@ -2,7 +2,6 @@ section .splash + nav {
   display: none;
 
   /* hide the nav-bar on splash screen */
-
 }
 
 .splash {
