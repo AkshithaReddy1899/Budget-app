@@ -34,6 +34,11 @@ li {
   margin-bottom: 30px;
 }
 
+.dropdown {
+  padding: 2px;
+  overflow-x: hidden;
+}
+
 .user-icon {
   width: 60px;
   height: 60px;

@@ -15,12 +15,14 @@
 					</div>
 					<div class="field">
 					  <p class="form-label">Pick a category</p>
-						<%= f.select :icon, ["Housing", "Transportation", "Food", "Utilities", "Insurance", "Medical & Healthcare", "Saving, Investments, & Debt Payments", "Personal Spending", "Recreation & Entertainment", "Clothes", "Miscellaneous"], class: "dropdown-menu" %>
+						<div class="dropdown"> 
+							<%= f.select :icon, ["Housing", "Transportation", "Food", "Utilities", "Insurance", "Medical & Healthcare", "Saving, Investments, & Debt Payments", "Personal Spending", "Recreation & Entertainment", "Clothes", "Miscellaneous"], class:"dropdown-item" %>
+						<div>
 					</div>
 
-					<div class="actions">
-          <%= f.submit "Add category", class: "btn btn-dark" %>
-        </div>
+					<div class="actions mt-3">
+            <%= f.submit "Add category", class: "btn btn-dark" %>
+          </div>
 					
 				<%end%>
 		</div>
