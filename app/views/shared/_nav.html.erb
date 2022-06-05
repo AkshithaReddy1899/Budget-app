@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary text-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
   <div class="container-fluid">
   <p class="logo nav-link">Budgety<p>
     <% if user_signed_in? %>
@@ -15,14 +15,8 @@
           </li>
         </ul>
         <div class="d-flex flex-column justify-content-around flex-lg-row">
-					<%= button_to "Sign out", destroy_user_session_path, class: "btn btn-dark", method: :delete, data: { turbo: false } %>
+					<%= button_to "Sign out", destroy_user_session_path, class: "btn btn-light", method: :delete, data: { turbo: false } %>
         </div>
-      </div>
-    <% else %>
-      <div class="navbar-right">
-        <%= link_to "Login", new_user_session_path, class:"btn btn-dark nav-btn" %>
-				&nbsp;
-					<%= link_to "Sign up", new_user_registration_path, class: "btn btn-dark nav-btn" %>
       </div>
     <% end %>
   </div>

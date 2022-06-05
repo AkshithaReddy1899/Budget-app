@@ -30,49 +30,13 @@ li {
   list-style: none;
 }
 
-/* Splash */
-
-.splash {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.splash-container {
-  width: 300px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.blob-container {
-  position: absolute;
-  z-index: -1;
-  transform-origin: 90% 50%;
-}
-
-.blob {
-  animation-name: blob-float;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-
-.logo {
-  font-family: var(--macondo-font-family);
-  font-size: 1.2rem;
-}
-
-.splash-text {
-  font-family: var(--macondo-font-family);
-  font-size: 2.5rem;
-  font-weight: bolder;
-}
-
 .field {
   margin-bottom: 30px;
+}
+
+.dropdown {
+  padding: 2px;
+  overflow-x: hidden;
 }
 
 .user-icon {
