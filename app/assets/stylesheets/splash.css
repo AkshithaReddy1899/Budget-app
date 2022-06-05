@@ -1,6 +1,8 @@
 section .splash + nav {
   display: none;
+
   /* hide the nav-bar on splash screen */
+
 }
 
 .splash {
@@ -8,7 +10,7 @@ section .splash + nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 .splash-container {
@@ -44,12 +46,12 @@ section .splash + nav {
 }
 
 .splash-btn-container {
-	margin: 35px;
+  margin: 35px;
 }
 
 .splash-btn {
-	width: 300px;
-	margin: 15px;
+  width: 300px;
+  margin: 15px;
   font-weight: bold;
   letter-spacing: 1.5px;
   font-family: var(--roboto-font-family);
