@@ -68,7 +68,3 @@ Feel free to check the [issues page](https://github.com/AkshithaReddy1899/budget
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## 📝 License
-
-This project is [Microverse](https://www.microverse.org/) licensed.
